@@ -2,9 +2,9 @@
   "name": "nodejs-advanced",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "async.js",
   "scripts": {
-    "start": "set UV_THREADPOOL_SIZE=1 & node threads.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

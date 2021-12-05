@@ -1,0 +1,5 @@
+Q: What functions in node std library use the OS's async features?
+A: Almost everything around networking for all OS's. Some other stuff is OS specific.
+
+Q: How does this os async stuff fit into the event loop?
+A: Tasks using the underlying OS are reflected in out 'pendingOSTasks' array. (__dir/eventloop/loop.js)
