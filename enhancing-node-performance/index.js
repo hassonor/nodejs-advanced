@@ -1,7 +1,6 @@
 import cluster from 'cluster';
 import { cpus } from 'os';
 import process from 'process';
-import * as http from "http";
 
 // Is the file being executed in master mode?
 // if (cluster.isMaster) {
