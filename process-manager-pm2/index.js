@@ -1,9 +1,15 @@
-import cluster from 'cluster';
-import process from 'process';
+process.env.UV_THREADPOOL_SIZE = 1;
+
+const cluster = require('cluster');
+const process = require("process");
+const crypto = require("crypto");
+
 
 // Is the file being executed in master mode?
 if (cluster.isMaster) {
     // Cause index.js to be executed *again* but in child mode.
+    cluster.fork();
+    cluster.fork();
     cluster.fork();
     cluster.fork();
     cluster.fork();
@@ -13,15 +19,11 @@ if (cluster.isMaster) {
     const express = require('express');
     const app = express();
 
-    function doWork(duration) {
-        const start = Date.now();
-        while (Date.now() - start < duration) {
-        }
-    }
-
     app.get('/', (req, res) => {
-        doWork(5000);
-        res.send('Hey There :)');
+        crypto.pbkdf2('a', 'b', 100000, 512, 'sha512',
+            () => {
+                res.send('Hey There :)');
+            });
     });
 
     app.get('/fast', (req, res) => {

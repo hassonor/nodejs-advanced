@@ -1,0 +1,15 @@
+{
+  "name": "enhancing-node-performance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start  index.js -i 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "process": "^0.11.10"
+  }
+}
