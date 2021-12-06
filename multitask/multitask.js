@@ -35,8 +35,3 @@ doHash();
 doHash();
 
 
-/*
-first we will print the https console.log(line13), after that lines (19,32,33,34,35)
- */
-
-
