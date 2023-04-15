@@ -1,9 +1,0 @@
-Q: Can we use the thread pool for javascript code or can only nodeJS functions use it?
-A: We can write custom JS that uses thread pool.
-
-Q: What functions in node std library use the thread pool?
-A: All 'fs' module functions. Some crypto stuffs. Depends on OS (windows / UNIX based).
-
-
-Q: How does this thread pool stuff fit into the event loop?
-A: Tasks running in the thread pool are the 'pendingOperations' in our code example. (__dir/eventloop/loop.js)
